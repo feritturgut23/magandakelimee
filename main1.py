@@ -41,10 +41,10 @@ def help(update, context):
                               '/rating => Derecelendirme\n\n' +
                               '/cancel => Oyunu sonlandırma\n\n' +
                               '/sunucu => sunucu değiştirir\n\n' +
-                              ' özel bot yapımı =>  , @burakizm\n\n' +
-                              ' Reklam ve Bilgilendirme => @flackwardev\n\n' +
-                              ' music botu => @joyturkbot\n\n' +
-                              ' Tag botu @joytagbot', reply_to_message_id=True)
+                              ' özel bot yapımı =>  , @magandasahip\n\n' +
+                              ' Reklam ve Bilgilendirme => @DeezerMusicFilm\n\n' +
+                              ' music botu => @DeezerMusicFilmbot\n\n' +
+                              ' Tag botu @DeezerTaggerbot', reply_to_message_id=True)
 
 
 def button(update, context):
@@ -72,7 +72,7 @@ def cancel(update, context):
 
     if get_or_create_game(update.effective_chat.id):
         del games[update.effective_chat.id]
-        send_message(update, "❌ Oyun başarılı bir şekilde sonlandırıldı İtiraf Kanalı => @Tgitiraf1 .")
+        send_message(update, "❌ Oyun başarılı bir şekilde sonlandırıldı Özel reklam için => @magandasahip .")
 
     else:
         send_message(update, "Kelime oyunu aktif değil /basla komutu ile oyun başlatın.")
@@ -80,15 +80,15 @@ def cancel(update, context):
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
 
-        addme = InlineKeyboardButton(text="🧚 GRUPLARA EKLE!", url="https://t.me/anlatbakimbot?startgroup=a")
-        sohbet = InlineKeyboardButton(text="💬 tag botu ", url="https://t.me/joytagbot")
-        oyun = InlineKeyboardButton(text="👾 Reklam ve Bilgilendirme", url="https://t.me/flackwardev")
-        admin = InlineKeyboardButton(text="👨🏻‍💻 Müsic botu", url="https://t.me/joyturkbot")
+        addme = InlineKeyboardButton(text="🧚 GRUPLARA EKLE!", url="https://t.me/DeezerKelimebot?startgroup=a")
+        sohbet = InlineKeyboardButton(text="💬 tag botu ", url="https://t.me/DeezerTaggerbot")
+        oyun = InlineKeyboardButton(text="👾 Reklam ve Bilgilendirme", url="https://t.me/DeezerMusicFilm")
+        admin = InlineKeyboardButton(text="👨🏻‍💻 Müsic botu", url="https://t.me/DeezerMusicFilmbot")
 
         keyboard = [[addme],[sohbet],[oyun],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('ÖZEL SOHBETTE OYUN OYNANMIYOR!\n'+
-                                  'Merhaba! Botumuz @AnlatbakimBot oyunun telegrama uyarlanmış hali.Gruba ekleyip yetki verdikten sonra geriye oynamak kalıyor 😉 destek için @Burakizm.Komutlar için /help yazınız!\n' +
+                                  'Merhaba! Botumuz @DeezerKelimebot oyunun telegrama uyarlanmış hali.Gruba ekleyip yetki verdikten sonra geriye oynamak kalıyor 😉 destek için @magandasahip.Komutlar için /help yazınız!\n' +
                                   'Not =>  ❌ kanala abone olmayı unutmayınız ❌\n', reply_to_message_id=True, reply_markup=reply_markup)
 
 def command_basla(update, context):

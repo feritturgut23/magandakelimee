@@ -83,7 +83,7 @@ def command_start(update, context: CallbackContext):
         addme = InlineKeyboardButton(text="🧚 GRUPLARA EKLE!", url="https://t.me/DeezerKelimebot?startgroup=a")
         sohbet = InlineKeyboardButton(text="💬 tag botu ", url="https://t.me/DeezerTaggerbot")
         oyun = InlineKeyboardButton(text="👾 Reklam ve Bilgilendirme", url="https://t.me/DeezerMusicFilm")
-        admin = InlineKeyboardButton(text="👨🏻‍💻 Müsic botu", url="https://t.me/DeezerMusicFilmbot")
+        admin = InlineKeyboardButton(text="👨🏻‍💻 Müzik botu", url="https://t.me/DeezerMusicFilmbot")
 
         keyboard = [[addme],[sohbet],[oyun],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)

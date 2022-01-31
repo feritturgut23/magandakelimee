@@ -89,7 +89,7 @@ def command_start(update, context: CallbackContext):
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('ÖZEL SOHBETTE OYUN OYNANMIYOR!\n'+
                                   'Merhaba! Botumuz @DeezerKelimebot oyunun telegrama uyarlanmış hali.Gruba ekleyip yetki verdikten sonra geriye oynamak kalıyor 😉 destek için @magandasahip.Komutlar için /help yazınız!\n' +
-                                  'Not =>  ❌ kanala abone olmayı unutmayınız ❌\n', reply_to_message_id=True, reply_markup=reply_markup)
+                                  'Not =>  ❌ kanala abone olmayı unutmayınız @DeezerMusicFilm ❌\n', reply_to_message_id=True, reply_markup=reply_markup)
 
 def command_basla(update, context):
         chat_id = update.message.chat.id

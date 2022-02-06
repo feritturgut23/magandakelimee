@@ -210,9 +210,7 @@ def command_rating(update, context):
 
     update.message.reply_text(rating_str, reply_to_message_id=True)
 
-def kaos(update, context):
-    chat_id = update.message.chat.id
-    update.message.reply_photo("https://te.legra.ph/file/4227fc45f2315b479b82c.jpg")
+
 
 def is_word_answered(update, context):
     chat_id = update.message.chat.id
@@ -257,7 +255,6 @@ def main():
     dp.add_handler(CommandHandler("change_word", command_change_word))
     dp.add_handler(CommandHandler("rating", command_rating))
     dp.add_handler(CommandHandler("help", help))
-    dp.add_handler(CommandHandler("kaos", kaos))
     dp.add_handler(CommandHandler("start", command_start))
     dp.add_handler(CommandHandler("cancel", cancel))
     dp.add_handler(CallbackQueryHandler(button))
